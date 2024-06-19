@@ -1,0 +1,22 @@
+header {
+    background-color: #ffffff;
+    color: #240404;
+    text-align: center;
+    padding: 1em 0;
+}
+.contacts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header h3{
+    justify-content: center;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header img{
+    height: 15px;
+}
