@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Screen Form with Signature Pad</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="multi-step-form">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <h2>Step 1</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <!-- Step 2 -->
+            <div class="form-step">
+                <h2>Step 2</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <!-- Step 3 -->
+            <div class="form-step">
+                <h2>Step 3</h2>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <!-- Step 4 - Signature Pad -->
+            <div class="form-step">
+                <h2>Step 4</h2>
+                <label for="signature">Signature:</label>
+                <canvas id="signature-pad" width="400" height="200" class="signature-pad"></canvas>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <button id="clear-data-btn" class="clear-data-btn">Clear Data</button>
+    </div>
+    <div id="notification" class="notification">Form successfully submitted!</div>
+    <script src="form.js"></script>
+</body>
+</html>

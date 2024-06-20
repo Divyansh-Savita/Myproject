@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #22b5ef;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px 0 0;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.next-btn:hover, .prev-btn:hover, .clear-data-btn:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.next-btn:active, .prev-btn:active, .clear-data-btn:active {
+    transform: translateY(0);
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.clear-data-btn {
+    background-color: #dc3545;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.clear-data-btn:hover {
+    background-color: #c82333;
+}
+
+.signature-pad {
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: crosshair;
+}
+
+.notification {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}
