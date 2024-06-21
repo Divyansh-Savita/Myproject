@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="categories">
+            <button id="lengthBtn" class="category-button active">Length</button>
+            <button id="temperatureBtn" class="category-button">Temperature</button>
+            <button id="areaBtn" class="category-button">Area</button>
+            <button id="volumeBtn" class="category-button">Volume</button>
+            <button id="weightBtn" class="category-button">Weight</button>
+            <button id="timeBtn" class="category-button">Time</button>
+        </div>
+        <div class="converter">
+            <form id="converterForm">
+                <!-- Length Converter -->
+                <fieldset id="lengthConverter" class="converter-section active">
+                    <legend>Length Converter</legend>
+                    <input type="number" id="lengthInput" placeholder="Enter length">
+                    <select id="lengthFrom">
+                        <option value="meter">Meter (m)</option>
+                        <option value="kilometer">Kilometer (km)</option>
+                        <option value="mile">Mile (mi)</option>
+                        <option value="yard">Yard (yd)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="lengthTo">
+                        <option value="meter">Meter (m)</option>
+                        <option value="kilometer">Kilometer (km)</option>
+                        <option value="mile">Mile (mi)</option>
+                        <option value="yard">Yard (yd)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <!-- Temperature Converter -->
+                <fieldset id="temperatureConverter" class="converter-section">
+                    <legend>Temperature Converter</legend>
+                    <input type="number" id="temperatureInput" placeholder="Enter temperature">
+                    <select id="temperatureFrom">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="temperatureTo">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <!-- Area Converter -->
+                <fieldset id="areaConverter" class="converter-section">
+                    <legend>Area Converter</legend>
+                    <input type="number" id="areaInput" placeholder="Enter area">
+                    <select id="areaFrom">
+                        <option value="squareMeter">Square Meter (m²)</option>
+                        <option value="squareKilometer">Square Kilometer (km²)</option>
+                        <option value="squareMile">Square Mile (mi²)</option>
+                        <option value="squareYard">Square Yard (yd²)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="areaTo">
+                        <option value="squareMeter">Square Meter (m²)</option>
+                        <option value="squareKilometer">Square Kilometer (km²)</option>
+                        <option value="squareMile">Square Mile (mi²)</option>
+                        <option value="squareYard">Square Yard (yd²)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <!-- Volume Converter -->
+                <fieldset id="volumeConverter" class="converter-section">
+                    <legend>Volume Converter</legend>
+                    <input type="number" id="volumeInput" placeholder="Enter volume">
+                    <select id="volumeFrom">
+                        <option value="cubicMeter">Cubic Meter (m³)</option>
+                        <option value="liter">Liter (L)</option>
+                        <option value="gallon">Gallon (gal)</option>
+                        <option value="cubicFoot">Cubic Foot (ft³)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="volumeTo">
+                        <option value="cubicMeter">Cubic Meter (m³)</option>
+                        <option value="liter">Liter (L)</option>
+                        <option value="gallon">Gallon (gal)</option>
+                        <option value="cubicFoot">Cubic Foot (ft³)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <!-- Weight Converter -->
+                <fieldset id="weightConverter" class="converter-section">
+                    <legend>Weight Converter</legend>
+                    <input type="number" id="weightInput" placeholder="Enter weight">
+                    <select id="weightFrom">
+                        <option value="kilogram">Kilogram (kg)</option>
+                        <option value="gram">Gram (g)</option>
+                        <option value="pound">Pound (lb)</option>
+                        <option value="ounce">Ounce (oz)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="weightTo">
+                        <option value="kilogram">Kilogram (kg)</option>
+                        <option value="gram">Gram (g)</option>
+                        <option value="pound">Pound (lb)</option>
+                        <option value="ounce">Ounce (oz)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <!-- Time Converter -->
+                <fieldset id="timeConverter" class="converter-section">
+                    <legend>Time Converter</legend>
+                    <input type="number" id="timeInput" placeholder="Enter time">
+                    <select id="timeFrom">
+                        <option value="second">Second (s)</option>
+                        <option value="minute">Minute (min)</option>
+                        <option value="hour">Hour (hr)</option>
+                        <option value="day">Day (day)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                    <select id="timeTo">
+                        <option value="second">Second (s)</option>
+                        <option value="minute">Minute (min)</option>
+                        <option value="hour">Hour (hr)</option>
+                        <option value="day">Day (day)</option>
+                        <!-- Add more units as needed -->
+                    </select>
+                </fieldset>
+
+                <button type="submit">Convert</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
