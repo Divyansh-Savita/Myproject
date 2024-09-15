@@ -1,0 +1,120 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    /* height: 50px; */
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 255);
+    
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#anchor{
+    margin: 10px;
+    
+}
+iframe{
+    
+    height: 250px;
+    border: 10px solid ;
+}
+    
+#courses{
+    background-color: rgb(36,164,138);
+}
+#Products{
+    background-color: rgb(211,79,79);
+}
+#About{
+    background-color: rgb(67,91,175);
+}
+#Tool{
+    background-color: rgb(191,64,191);
+}
+button{
+                 
+    
+        background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;      
+}
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+#text{
+    color: #fff;
+    font-size: 30px;
+}
+.flip-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #007BFF;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.flip-card h3, .flip-card p {
+    margin: 10px;
+}
