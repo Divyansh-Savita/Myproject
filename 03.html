@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg changer </title>
+</head>
+
+<body>
+    <button id="stop">Stop</button>
+    <button id="start">start</button>
+    <script>
+
+        let bgColorChanger = () => {
+            let hexa = '0123456789ABCDEF'
+            let hexaIndex = '#'
+            for (let i = 0; i < 6; i++) {
+                hexaIndex += hexa[Math.floor((Math.random() * 16) )]
+            }
+            return hexaIndex
+        }
+        let interval
+        let startChangingColor=function(){
+            
+            let changer=()=>(document.body.style.backgroundColor=bgColorChanger())
+            if(!interval){
+            interval= setInterval(changer,1000)
+            }
+        }
+        let stopChangingColor=()=>{
+            clearInterval(interval)
+            interval=null
+        }
+
+        document.querySelector('#start').addEventListener('click', startChangingColor)
+        document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+        
+        
+        
+    </script>
+</body>
+
+</html>
