@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Richie Rich</h1>
+    <button id="stop">Stop</button>
+    <script>
+        const sayRich=()=>{console.log("RichieRIch");
+        }
+        setTimeout(sayRich,2000)//it also call an api.it is not part of core js it is provided by browser
+        // clear timeout clear interval. set timeout needs reference of fn
+
+        const changeText=function(){
+            document.querySelector('h1').innerHTML=`I'm powerfully rich`
+        }
+        const changeMe=setTimeout(changeText, 2000);
+        // clearTimeout(changeMe)//it takes refrence of setimeout
+        document.querySelector('button').addEventListener('click',()=>{//it also called handler and callback
+            clearTimeout(changeMe)
+            console.log("stopped");
+            
+        })
+
+       
+    </script>
+</body>
+</html>

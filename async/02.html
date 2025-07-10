@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg changer every second</title>
+</head>
+
+<body>
+    <button id="stop">Stop</button>
+    <button id="start">start</button>
+    <script>
+
+        let bgColorChanger = () => {
+            let hexa = '0123456789ABCDEF'
+            let hexaIndex = '#'
+            for (let i = 0; i < 6; i++) {
+                let hexaI = Math.floor((Math.random() * 16) )
+                hexaIndex += hexa[hexaI]
+            }
+            return hexaIndex
+        }
+        let interval
+        document.querySelector('#start').addEventListener('click', () => {
+            interval= setInterval(() => document.querySelector('body').style.backgroundColor = `${bgColorChanger()}`, 1000)
+
+        })
+
+        // const intervalId= setInterval(bgColorChanger,2000,)//u can param also
+
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(interval)
+            interval=null
+        })
+
+    </script>
+</body>
+
+</html>
